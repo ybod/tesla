@@ -86,7 +86,7 @@ defmodule Tesla.Test do
   If the body is binary, it will be returned as is and it will not try to encode
   it to JSON.
   """
-  @spec json(Tesla.Env.t(), term) :: Tesla.Env.t()
+  @spec json(%Tesla.Env{}, term) :: Tesla.Env.t()
   def json(%Tesla.Env{} = env, body) do
     body = encode!(body, "application/json")
 
